@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { darken } from 'polished';
 
 export const Container = styled.section`
   width: 100%;
@@ -134,7 +133,7 @@ export const InfoItem = styled.pre`
   }
 
   span.secondary {
-    color: ${({ theme }) => darken(0.2, theme.primary)};
+    color: yellow;
   }
 
   section.about {

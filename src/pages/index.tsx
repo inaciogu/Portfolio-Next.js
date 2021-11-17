@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import HomeContainer from '../styles/HomeStyles';
 import HomeHero from '../components/HomeHero';
 import Projects from '../components/Projetos/index';
+import Knowledge from '../components/Knowledge';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <main className="container">
           <HomeHero />
           <Projects />
+          <Knowledge />
         </main>
       </HomeContainer>
     </div>
