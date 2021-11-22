@@ -69,6 +69,7 @@ export const TextContainer = styled.section`
     h2 {
       font-size: 2rem;
     }
+  }
   @media (max-width: 1000px) {
     h1 {
       font-size: 3rem;

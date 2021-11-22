@@ -4,6 +4,8 @@ import HomeContainer from '../styles/HomeStyles';
 import HomeHero from '../components/HomeHero';
 import Projects from '../components/Projetos/index';
 import Knowledge from '../components/Knowledge';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -17,7 +19,9 @@ export default function Home() {
           <HomeHero />
           <Projects />
           <Knowledge />
+          <Contact />
         </main>
+        <Footer />
       </HomeContainer>
     </div>
   );
