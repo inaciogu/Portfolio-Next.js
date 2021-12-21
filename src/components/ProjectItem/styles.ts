@@ -30,7 +30,6 @@ const Container = styled.div<ContainerProps>`
     }
 
     section {
-      margin: 15px;
       z-index: 2;
       h1 {
         color: ${({ theme }) => theme.primary};
@@ -50,8 +49,6 @@ const Container = styled.div<ContainerProps>`
       transition: 0.5s;
       left: 0;
       bottom: 0;
-      display: flex;
-      align-items: flex-end;
     }
   }
 `;
