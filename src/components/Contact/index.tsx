@@ -4,7 +4,7 @@ import { Container } from './styles';
 
 function Contact() {
   return (
-    <Container>
+    <Container id="contact">
       <SectionTitle
         title={
           <>

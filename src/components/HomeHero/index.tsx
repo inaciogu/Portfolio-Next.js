@@ -4,16 +4,15 @@ import picture from '../../assets/foto.jpeg';
 
 function HomeHero() {
   return (
-    <Container>
+    <Container data-aos="fade-right">
       <div>
         <img src={picture} alt="" />
       </div>
       <div>
         <TextContainer>
-          <h1>Olá</h1>
-          <h2>Me chamo Gustavo</h2>
+          <h1>Quem sou?!</h1>
           <InfosContainer>
-            <InfoItem>
+            <InfoItem data-aos="zoom-in">
               <section className="about">Sobre mim</section>
               <p>
                 Desenvolvedor Front End jr. altamente comunicativo, dedicado e
@@ -24,7 +23,7 @@ function HomeHero() {
                 mercado de trabalho e agregar valor.
               </p>
             </InfoItem>
-            <InfoItem>
+            <InfoItem data-aos="zoom-in">
               <span className="purple">Infos:</span> {'\u007B'}
               <div>
                 Nome: <span className="primary">Gustavo,</span>
@@ -43,7 +42,7 @@ function HomeHero() {
               </div>
               {'\u007D'}
             </InfoItem>
-            <InfoItem>
+            <InfoItem data-aos="zoom-in">
               <span className="purple">Soft Skills:</span> {'\u007B'}
               <div>
                 <span className="blue">Autodidatismo,</span>

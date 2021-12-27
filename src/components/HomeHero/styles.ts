@@ -9,8 +9,9 @@ export const Container = styled.section`
   align-items: center;
 
   img {
-    width: 48rem;
+    width: 30rem;
     flex: 1;
+    box-shadow: 60px -50px 0px #202020;
   }
 
   div {
@@ -19,8 +20,8 @@ export const Container = styled.section`
 
   @media (max-width: 1450px) {
     img {
-      width: 48rem;
-      height: 37rem;
+      width: 30rem;
+      height: 35rem;
     }
 
     > div {
@@ -97,7 +98,7 @@ export const InfoItem = styled.div`
   font-weight: 300;
   color: #fff;
   align-self: flex-start;
-  transition: 1s;
+  transition: 1s !important;
 
   @media (max-width: 1200px) {
     width: 18rem;

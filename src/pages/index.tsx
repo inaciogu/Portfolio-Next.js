@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import Prismic from '@prismicio/client';
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import Header from '../components/Header';
 import HomeContainer from '../styles/HomeStyles';
 import HomeHero from '../components/HomeHero';
@@ -23,22 +26,35 @@ interface HomeProps {
 }
 
 export default function Home({ projects }: HomeProps) {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
-    <div>
+    <HomeContainer>
       <Head>
-        <title>Home</title>
+        <title>Home | Portfólio Web</title>
+        <meta
+          name="description"
+          content="Sou desenvolvedor Front End Jr. e esse é o meu portfólio web, contendo informações sobre mim e alguns projetos que desenvolvi"
+        />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:description"
+          content="Sou desenvolvedor Front End Jr. e esse é o meu portfólio web, contendo informações sobre mim e alguns projetos que desenvolvi"
+        />
       </Head>
-      <HomeContainer>
-        <Header />
-        <main className="container">
-          <HomeHero />
-          <Projects projects={projects} />
-          <Knowledge />
-          <Contact />
-        </main>
-        <Footer />
-      </HomeContainer>
-    </div>
+      <Header />
+      <main className="container">
+        <HomeHero />
+        <Projects projects={projects} />
+        <Knowledge />
+        <Contact />
+      </main>
+      <Footer />
+    </HomeContainer>
   );
 }
 
@@ -48,7 +64,6 @@ export const getStaticProps: GetStaticProps = async () => {
     [Prismic.Predicates.at('document.type', 'project')],
     { orderings: '[document.first_publication_date desc]' }
   );
-  console.log(projectRes.results);
 
   const projects = projectRes.results.map(project => ({
     slug: project.uid,

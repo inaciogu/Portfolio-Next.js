@@ -22,7 +22,19 @@ export default function Projects({ projects }: ProjectProps) {
   return (
     <div>
       <Head>
-        <title>Projetos</title>
+        <title>Projetos | Portfólio Web</title>
+        <meta
+          name="description"
+          content="Esta página contém os projetos que desenvolvi, cada um tem sua página única com informações relevantes"
+        />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:description"
+          content="Esta página contém os projetos que desenvolvi, cada um tem sua página única com informações relevantes"
+        />
       </Head>
       <ProjectsContainer>
         <Header />
@@ -48,7 +60,6 @@ export const getStaticProps: GetStaticProps = async () => {
     [Prismic.Predicates.at('document.type', 'project')],
     { orderings: '[document.first_publication_date desc]' }
   );
-  console.log(projectRes.results);
 
   const projects = projectRes.results.map(project => ({
     slug: project.uid,
