@@ -20,7 +20,7 @@ function Projetos({ projects }: ProjectsProps) {
     <Container>
       <SectionTitle title="Ultimos Projetos" />
       <section>
-        {projects.map(project => (
+        {projects.slice(0, 2).map(project => (
           <ProjectItem
             key={project.slug}
             title={project.title}
