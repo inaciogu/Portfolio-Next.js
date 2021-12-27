@@ -1,15 +1,22 @@
+import { ReactNode } from 'react';
 import Container from './styles';
 
 interface SectionTitleProps {
-  title: string;
+  title: string | ReactNode;
+  description?: string | ReactNode;
 }
 
-function SectionTitle({ title }: SectionTitleProps) {
+function SectionTitle({ title, description }: SectionTitleProps) {
   return (
-    <Container>
+    <Container data-aos="fade-right">
       <h1>{title}</h1>
+      <h2>{description}</h2>
     </Container>
   );
 }
+
+SectionTitle.defaultProps = {
+  description: ''
+};
 
 export default SectionTitle;

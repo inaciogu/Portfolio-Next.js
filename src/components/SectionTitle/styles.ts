@@ -13,9 +13,9 @@ const Container = styled.div`
   }
 
   h2 {
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.textLight};
     font-weight: 300;
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   @media (max-width: 1000px) {
