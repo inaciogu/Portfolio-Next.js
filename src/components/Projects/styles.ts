@@ -61,7 +61,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
   &:hover {
     > section {
       > div.text {
-        right: -12rem;
+        right: -15rem;
       }
 
       > div.overlay {
@@ -139,7 +139,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
     > section > div.text {
       text-align: right;
       right: 0;
-      left: -10rem;
+      left: -6rem;
     }
 
     &:hover {
