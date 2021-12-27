@@ -32,7 +32,7 @@ const Container = styled.div<ContainerProps>`
     section {
       z-index: 2;
       h1 {
-        color: ${({ theme }) => theme.primary};
+        color: white;
         font-size: 1.5rem;
       }
       h2 {

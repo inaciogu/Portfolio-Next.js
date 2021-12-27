@@ -13,7 +13,11 @@ function Contact() {
             Vamos trabalhar juntos!
           </>
         }
-        description={<>Preencha o formulário abaixo que retornarei em breve.</>}
+        description={
+          <>
+            Preencha o formulário abaixo <br />e eu retornarei em breve!
+          </>
+        }
       />
       <Form />
     </Container>

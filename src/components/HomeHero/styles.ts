@@ -3,24 +3,24 @@ import styled from 'styled-components';
 export const Container = styled.section`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
 
-  > img {
-    width: 30rem;
+  img {
+    width: 48rem;
     flex: 1;
-    box-shadow: 12px;
   }
 
-  > div {
+  div {
     flex: 4;
   }
 
   @media (max-width: 1450px) {
-    > img {
-      width: 20rem;
+    img {
+      width: 48rem;
+      height: 37rem;
     }
 
     > div {
@@ -29,8 +29,8 @@ export const Container = styled.section`
   }
 
   @media (max-width: 1000px) {
-    > img {
-      width: 12rem;
+    img {
+      width: 20rem;
     }
   }
 
@@ -49,6 +49,7 @@ export const Container = styled.section`
 export const TextContainer = styled.section`
   width: 100%;
   margin-bottom: 2rem;
+  margin-top: 5rem;
 
   h1 {
     font-size: 8rem;
@@ -84,17 +85,17 @@ export const TextContainer = styled.section`
 export const InfosContainer = styled.section`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 2rem;
 `;
 
-export const InfoItem = styled.pre`
+export const InfoItem = styled.div`
   background: ${({ theme }) => theme.gradient};
   padding: 2rem;
   font-family: 'JetBrains Mono,', monospace;
   font-weight: 300;
   color: #fff;
-  width: 24rem;
   align-self: flex-start;
   transition: 1s;
 
@@ -112,8 +113,14 @@ export const InfoItem = styled.pre`
     filter: brightness(1.3);
   }
 
+  &:nth-child(2) {
+    align-self: center;
+    width: 23rem;
+  }
+
   &:last-child {
-    align-self: flex-end;
+    align-self: flex-start;
+    width: 23rem;
   }
 
   > div {
@@ -125,6 +132,10 @@ export const InfoItem = styled.pre`
     color: #c38cdd;
   }
 
+  span.yellow {
+    color: darkgoldenrod;
+  }
+
   span.blue {
     color: #7ac7e3;
   }
@@ -134,7 +145,11 @@ export const InfoItem = styled.pre`
   }
 
   span.secondary {
-    color: yellow;
+    color: ${({ theme }) => theme.secondary};
+  }
+
+  span.green {
+    color: green;
   }
 
   section.about {

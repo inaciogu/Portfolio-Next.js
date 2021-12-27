@@ -30,6 +30,7 @@ const Container = styled.footer`
         width: 2rem;
         height: 2rem;
         color: ${({ theme }) => theme.text};
+        cursor: pointer;
 
         &:hover {
           color: ${({ theme }) => theme.primary};

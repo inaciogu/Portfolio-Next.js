@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@prismicio/client": "^5.1.0",
     "lighten": "^0.0.0",
     "next": "10.2.0",
     "next-images": "^1.7.0",

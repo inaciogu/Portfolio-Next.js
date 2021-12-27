@@ -10,14 +10,14 @@ export const FormContainer = styled.form`
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 
-  > button {
+  button {
     border: none;
     padding: 1rem 2.5rem;
-    color: #fff;
-    font-weight: 300;
+    color: black;
+    font-weight: 500;
     border-radius: 0.5rem;
     background: ${({ theme }) => theme.primary};
-    transition: 0.5rem;
+    transition: 0.5s;
     width: fit-content;
     text-transform: uppercase;
 
@@ -26,7 +26,7 @@ export const FormContainer = styled.form`
     }
 
     &:not(:disabled):hover {
-      background: ${({ theme }) => darken(0.1, theme.primary)};
+      background: ${({ theme }) => darken(0.05, theme.primary)};
     }
   }
 

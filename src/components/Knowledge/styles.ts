@@ -28,7 +28,7 @@ export const KnowledgeContainer = styled.div`
   flex-direction: column;
 
   p {
-    color: ${({ theme }) => theme.primary};
+    color: white;
     text-transform: uppercase;
     font-size: 1.3rem;
     font-weight: 300;
@@ -38,14 +38,15 @@ export const KnowledgeContainer = styled.div`
   svg {
     width: 6.5rem;
     height: 6.5rem;
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.primary};
     transition: 0.3s;
   }
 
   &:hover {
     svg {
       transform: scale(0.95);
-      color: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.secondary};
+      transition: 1s;
     }
   }
 

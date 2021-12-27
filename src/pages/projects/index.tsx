@@ -1,9 +1,24 @@
 import Head from 'next/head';
+import { GetStaticProps } from 'next';
+import Prismic from '@prismicio/client';
 import ProjectsContainer from '../../styles/ProjectStyles';
 import Header from '../../components/Header';
 import ProjectItem from '../../components/ProjectItem';
+import getPrismicClient from '../../services/prismic';
 
-export default function Projects() {
+interface IProject {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  thumb: string;
+}
+
+interface ProjectProps {
+  projects: IProject[];
+}
+
+export default function Projects({ projects }: ProjectProps) {
   return (
     <div>
       <Head>
@@ -12,14 +27,42 @@ export default function Projects() {
       <ProjectsContainer>
         <Header />
         <main className="container">
-          <ProjectItem
-            type="website"
-            title="projeto 1"
-            slug="test"
-            imgUrl="https://next.me/v2/whatsnext/cartao-credito-next/kvblog_pedir_cartao_v1.png"
-          />
+          {projects.map(project => (
+            <ProjectItem
+              key={project.slug}
+              type={project.type}
+              title={project.title}
+              slug={project.slug}
+              imgUrl={project.thumb}
+            />
+          ))}
         </main>
       </ProjectsContainer>
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+  const projectRes = await prismic.query(
+    [Prismic.Predicates.at('document.type', 'project')],
+    { orderings: '[document.first_publication_date desc]' }
+  );
+  console.log(projectRes.results);
+
+  const projects = projectRes.results.map(project => ({
+    slug: project.uid,
+    title: project.data.title,
+    type: project.data.type,
+    description: project.data.description,
+    link: project.data.link.url,
+    thumb: project.data.thumb.url
+  }));
+
+  return {
+    props: {
+      projects
+    },
+    revalidate: 86400
+  };
+};

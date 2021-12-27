@@ -495,6 +495,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prismicio/client@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "@prismicio/client@npm:5.1.0"
+  dependencies:
+    cross-fetch: ^3.0.6
+  checksum: b30b2127924dd4abe189ef424d81a2bb24b7a1ecefc09d1fad79115278c87e3dcc7eeb0601cce64e0b9269e6ab8a5f18e14cd951f08c8532ef4b39c595c8e5dd
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:1":
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
@@ -1637,6 +1646,15 @@ __metadata:
   version: 1.1.1
   resolution: "create-require@npm:1.1.1"
   checksum: a9a1503d4390d8b59ad86f4607de7870b39cad43d929813599a23714831e81c520bddf61bcdd1f8e30f05fd3a2b71ae8538e946eb2786dc65c2bbc520f692eff
+  languageName: node
+  linkType: hard
+
+"cross-fetch@npm:^3.0.6":
+  version: 3.1.4
+  resolution: "cross-fetch@npm:3.1.4"
+  dependencies:
+    node-fetch: 2.6.1
+  checksum: 2107e5e633aa327bdacab036b1907c7ddd28651ede0c1d4fd14db04510944d56849a8255e2f5b8f9a1da0e061b6cee943f6819fe29ed9a130195e7fadd82a4ff
   languageName: node
   linkType: hard
 
@@ -5700,6 +5718,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "template-initial-config-next-ts-eslint-prettier@workspace:."
   dependencies:
+    "@prismicio/client": ^5.1.0
     "@types/node": ^15.3.0
     "@types/react": ^17.0.5
     "@types/styled-components": ^5.1.9
