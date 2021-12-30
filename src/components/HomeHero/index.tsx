@@ -15,12 +15,13 @@ function HomeHero() {
             <InfoItem data-aos="zoom-in">
               <section className="about">Sobre mim</section>
               <p>
-                Desenvolvedor Front End jr. altamente comunicativo, dedicado e
-                cheio de vontade de aprender cada vez mais. Comecei minha
-                jornada no desenvolvimento web em junho de 2021 e desde então,
-                venho me esforçado todos os dias para evoluir minhas habilidades
-                tecnicas e sociocomportamentais a fim de poder ingressar no
-                mercado de trabalho e agregar valor.
+                Desenvolvedor <strong>Front End jr.</strong> altamente
+                comunicativo, dedicado e cheio de vontade de aprender cada vez
+                mais. Comecei minha jornada no{' '}
+                <strong>desenvolvimento web</strong> em junho de 2021 e desde
+                então, venho me esforçado todos os dias para evoluir minhas
+                habilidades tecnicas e sociocomportamentais a fim de poder
+                ingressar no mercado de trabalho e agregar valor.
               </p>
             </InfoItem>
             <InfoItem data-aos="zoom-in">

@@ -11,10 +11,10 @@ export const Container = styled.section`
   img {
     width: 30rem;
     flex: 1;
-    box-shadow: 60px -50px 0px ${({ theme }) => theme.primary};
+    box-shadow: 40px -50px 0px ${({ theme }) => theme.primary};
   }
 
-  div {
+  > div {
     flex: 4;
   }
 

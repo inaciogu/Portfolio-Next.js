@@ -27,13 +27,16 @@ const Container = styled.footer`
       align-items: center;
 
       svg {
-        width: 2rem;
-        height: 2rem;
+        width: 2.3rem;
+        height: 2.3rem;
         color: ${({ theme }) => theme.text};
         cursor: pointer;
+        transition: 0.5s;
+        margin: 10px;
 
         &:hover {
           color: ${({ theme }) => theme.primary};
+          transform: translateY(-20%);
         }
       }
     }
