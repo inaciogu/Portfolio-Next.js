@@ -43,6 +43,7 @@ export const Container = styled.section`
 
     > img {
       width: 70%;
+      box-shadow: 60px -30px 0px ${({ theme }) => theme.primary};
     }
   }
 `;
@@ -125,7 +126,7 @@ export const InfoItem = styled.div`
   }
 
   > div {
-    margin: 0.2rem 0;
+    margin: 0.2rem;
     margin-left: 1rem;
   }
 

@@ -9,7 +9,7 @@ import { Container } from './styles';
 function Knowledge() {
   return (
     <Container>
-      <SectionTitle title="Tool Kit" />
+      <SectionTitle title="Toolkit" />
       <section>
         <KnowledgeItem title="HTML5" icon={<AiFillHtml5 />} />
         <KnowledgeItem title="CSS3" icon={<FaCss3Alt />} />
