@@ -1,57 +1,10 @@
-import { darken } from 'polished';
 import styled from 'styled-components';
 
-interface ProjectProps {
-  imgSrc: string;
+interface CertificateProps {
+  imgUrl: string;
 }
 
-export const Container = styled.section`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5rem;
-
-  > section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-  }
-
-  @media (max-width: 1000px) {
-    gap: 2rem;
-  }
-
-  > button {
-    background: ${({ theme }) => theme.primary};
-    padding: 0.8rem 1rem;
-    border-radius: 0.5rem;
-    border: none;
-    transition: 0.5s;
-
-    &:hover {
-      background: ${({ theme }) => darken(0.1, theme.secondary)};
-    }
-
-    a {
-      text-transform: uppercase;
-      color: #fff;
-      font-size: 1.5rem;
-      font-weight: 300;
-    }
-
-    @media (max-width: 500px) {
-      padding: 1rem;
-      a {
-        font-size: 1rem;
-      }
-    }
-  }
-`;
-
-export const ProjectContainer = styled.div<ProjectProps>`
+const CertificateContainer = styled.div<CertificateProps>`
   width: 100%;
   display: flex;
   height: 25rem;
@@ -63,6 +16,10 @@ export const ProjectContainer = styled.div<ProjectProps>`
       > div.text {
         right: -15rem;
       }
+
+      > div.overlay {
+        opacity: 0.4;
+      }
     }
 
     > button a {
@@ -72,7 +29,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
 
   > button {
     height: 4rem;
-    margin: 0 0 3rem 5rem;
+    margin: 0 0 3rem 2rem;
     background: none;
     border: none;
 
@@ -90,9 +47,18 @@ export const ProjectContainer = styled.div<ProjectProps>`
   > section {
     width: 40rem;
     height: 100%;
-    background: url(${props => props.imgSrc}) no-repeat center;
+    background: url(${props => props.imgUrl}) no-repeat center;
     background-size: cover;
     position: relative;
+
+    > div.overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: ${({ theme }) => theme.gradient};
+      opacity: 0.75;
+      transition: 0.5s;
+    }
 
     > div.text {
       position: absolute;
@@ -103,7 +69,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
     }
 
     h1 {
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.primary};
       font-size: 2.5rem;
       text-shadow: -4px 5px 22px #11172b;
     }
@@ -115,23 +81,22 @@ export const ProjectContainer = styled.div<ProjectProps>`
       text-shadow: -4px 5px 22px #11172b;
     }
   }
-
   &:nth-child(even) {
     flex-direction: row-reverse;
 
     > button {
-      margin: 3rem 5rem 0 0;
+      margin: 3rem 2rem 0 0;
     }
 
     > section > div.text {
       text-align: right;
       right: 0;
-      left: -6rem;
+      left: -27rem;
     }
 
     &:hover {
       > section > div.text {
-        left: -12rem;
+        left: -37rem;
       }
     }
   }
@@ -208,3 +173,5 @@ export const ProjectContainer = styled.div<ProjectProps>`
     }
   }
 `;
+
+export default CertificateContainer;

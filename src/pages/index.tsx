@@ -12,6 +12,7 @@ import Knowledge from '../components/Knowledge';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import getPrismicClient from '../services/prismic';
+import Certificates from '../components/Certificates';
 
 interface IProject {
   slug: string;
@@ -50,6 +51,7 @@ export default function Home({ projects }: HomeProps) {
       <main className="container">
         <HomeHero />
         <Projects projects={projects} />
+        <Certificates />
         <Knowledge />
         <Contact />
       </main>

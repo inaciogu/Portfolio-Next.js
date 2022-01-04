@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { AiOutlineRightCircle } from 'react-icons/ai';
+import Overlay from '../Overlay';
 import { ProjectContainer } from './styles';
 
 interface ProjectProps {
@@ -12,7 +13,7 @@ export default function ProjectItem({ title, slug, img }: ProjectProps) {
   return (
     <ProjectContainer data-aos="fade-up" imgSrc={img}>
       <section>
-        <div className="overlay" />
+        <Overlay />
         <div className="text">
           <h1># {title}</h1>
         </div>

@@ -23,14 +23,10 @@ const Container = styled.div<ContainerProps>`
 
     &:hover {
       border-color: ${({ theme }) => theme.primary};
-
-      > div.overlay {
-        opacity: 0.5;
-      }
     }
 
     section {
-      z-index: 2;
+      z-index: 1;
       h1 {
         color: white;
         font-size: 1.5rem;
@@ -39,16 +35,6 @@ const Container = styled.div<ContainerProps>`
         color: ${({ theme }) => theme.secondary};
         font-size: 1rem;
       }
-    }
-    > div.overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: ${({ theme }) => theme.gradient};
-      opacity: 0.7;
-      transition: 0.5s;
-      left: 0;
-      bottom: 0;
     }
   }
 `;

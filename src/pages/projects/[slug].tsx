@@ -23,7 +23,7 @@ interface ProjectProps {
 
 export default function Project({ project }: ProjectProps) {
   const router = useRouter();
-  if (router.isFallback === true) {
+  if (router.isFallback) {
     return <Loading />;
   }
   return (

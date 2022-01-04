@@ -1,3 +1,4 @@
+import Overlay from '../Overlay';
 import Container from './styles';
 
 interface ProjectBannerProps {
@@ -9,7 +10,7 @@ interface ProjectBannerProps {
 function ProjectBanner({ title, type, imgUrl }: ProjectBannerProps) {
   return (
     <Container imgUrl={imgUrl}>
-      <div className="overlay" />
+      <Overlay />
       <section>
         <h1>{title}</h1>
         <h2>{type}</h2>

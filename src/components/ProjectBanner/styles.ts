@@ -27,17 +27,6 @@ const Container = styled.div<ContainerProps>`
     }
   }
 
-  > div.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: ${({ theme }) => theme.gradient};
-    opacity: 0.7;
-    transition: 0.5s;
-    left: 0;
-    bottom: 0;
-  }
-
   @media (max-width: 700px) {
     padding: 2rem 2.5rem;
     height: 17rem;

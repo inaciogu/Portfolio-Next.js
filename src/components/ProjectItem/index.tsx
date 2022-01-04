@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Overlay from '../Overlay';
 import Container from './styles';
 
 interface ProjectItemProps {
@@ -13,7 +14,7 @@ function ProjectItem({ title, type, slug, imgUrl }: ProjectItemProps) {
     <Container imgUrl={imgUrl}>
       <Link href={`/projects/${slug}`}>
         <a>
-          <div className="overlay" />
+          <Overlay />
           <section>
             <h1>{title}</h1>
             <h2>{type}</h2>
