@@ -1,3 +1,4 @@
+import { darken } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.section`
@@ -7,11 +8,12 @@ export const Container = styled.section`
   gap: 2rem;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.text};
 
   img {
     width: 30rem;
     flex: 1;
-    box-shadow: 40px -50px 0px ${({ theme }) => theme.primary};
+    box-shadow: 40px -50px 0px ${({ theme }) => theme.colors.primary};
   }
 
   > div {
@@ -43,7 +45,7 @@ export const Container = styled.section`
 
     > img {
       width: 70%;
-      box-shadow: 60px -30px 0px ${({ theme }) => theme.primary};
+      box-shadow: 60px -30px 0px ${({ theme }) => theme.colors.primary};
     }
   }
 `;
@@ -55,12 +57,12 @@ export const TextContainer = styled.section`
 
   h1 {
     font-size: 8rem;
-    color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   h2 {
     font-weight: 400;
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.colors.secondary};
     font-size: 3rem;
   }
 
@@ -93,11 +95,11 @@ export const InfosContainer = styled.section`
 `;
 
 export const InfoItem = styled.div`
-  background: ${({ theme }) => theme.gradient};
+  background: ${({ theme }) => theme.colors.gradient};
   padding: 2rem;
   font-family: 'JetBrains Mono,', monospace;
   font-weight: 300;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.text};
   align-self: flex-start;
   transition: 1s !important;
 
@@ -112,7 +114,7 @@ export const InfoItem = styled.div`
   }
 
   &:hover {
-    filter: brightness(1.3);
+    filter: brightness(1.1);
   }
 
   &:nth-child(2) {
@@ -143,11 +145,11 @@ export const InfoItem = styled.div`
   }
 
   span.primary {
-    color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   span.secondary {
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => darken(0.3, theme.colors.secondary)};
   }
 
   span.green {
@@ -155,7 +157,9 @@ export const InfoItem = styled.div`
   }
 
   section.about {
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.colors.text};
+    opacity: 0.3;
+    font-weight: 500;
     margin-bottom: 1rem;
   }
 `;

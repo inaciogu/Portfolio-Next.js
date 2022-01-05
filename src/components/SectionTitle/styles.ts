@@ -8,12 +8,12 @@ const Container = styled.div`
   gap: 0.5rem;
 
   h1 {
-    color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.colors.primary};
     font-size: 3.2rem;
   }
 
   h2 {
-    color: ${({ theme }) => theme.textLight};
+    color: ${({ theme }) => theme.colors.text};
     font-weight: 300;
     font-size: 3rem;
   }

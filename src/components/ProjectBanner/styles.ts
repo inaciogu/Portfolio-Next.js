@@ -18,11 +18,11 @@ const Container = styled.div<ContainerProps>`
   section {
     z-index: 0;
     h1 {
-      color: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.colors.primary};
       font-size: 3rem;
     }
     h2 {
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.colors.secondary};
       font-size: 2rem;
     }
   }

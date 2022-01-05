@@ -23,7 +23,7 @@ const CertificateContainer = styled.div<CertificateProps>`
     }
 
     > button a {
-      color: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.colors.primary};
     }
   }
 
@@ -34,7 +34,7 @@ const CertificateContainer = styled.div<CertificateProps>`
     border: none;
 
     a {
-      color: #fff;
+      color: ${({ theme }) => theme.colors.text};
       font-size: 2rem;
       font-weight: 300;
       display: flex;
@@ -51,15 +51,6 @@ const CertificateContainer = styled.div<CertificateProps>`
     background-size: cover;
     position: relative;
 
-    > div.overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: ${({ theme }) => theme.gradient};
-      opacity: 0.75;
-      transition: 0.5s;
-    }
-
     > div.text {
       position: absolute;
       top: 3rem;
@@ -69,13 +60,13 @@ const CertificateContainer = styled.div<CertificateProps>`
     }
 
     h1 {
-      color: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.colors.primary};
       font-size: 2.5rem;
       text-shadow: -4px 5px 22px #11172b;
     }
 
     h2 {
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.colors.secondary};
       font-size: 2rem;
       font-weight: 300;
       text-shadow: -4px 5px 22px #11172b;

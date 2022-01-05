@@ -11,7 +11,7 @@ export default createGlobalStyle`
       height: 5px;
     }
     ::-webkit-scrollbar-thumb {
-      background: white;
+      background: ${({ theme }) => theme.colors.text};
       border-radius: 10px;
     }
     ::-webkit-scrollbar-track{
@@ -19,7 +19,7 @@ export default createGlobalStyle`
     }
   }
   body {
-    background: ${props => props.theme.backgroundGradient};
+    background: ${props => props.theme.colors.backgroundGradient};
     background-attachment: fixed;
     font: 400 1rem 'Montserrat', sans-serif;
   }

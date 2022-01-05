@@ -11,6 +11,7 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 5rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.text};
 
   > section {
     width: 100%;
@@ -25,14 +26,15 @@ export const Container = styled.section`
   }
 
   > button {
-    background: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.colors.primary};
     padding: 0.8rem 1rem;
     border-radius: 0.5rem;
     border: none;
+    margin-bottom: 2rem;
     transition: 0.5s;
 
     &:hover {
-      background: ${({ theme }) => darken(0.1, theme.secondary)};
+      background: ${({ theme }) => darken(0.1, theme.colors.secondary)};
     }
 
     a {
@@ -66,7 +68,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
     }
 
     > button a {
-      color: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.colors.primary};
     }
   }
 
@@ -77,7 +79,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
     border: none;
 
     a {
-      color: #fff;
+      color: ${({ theme }) => theme.colors.text};
       font-size: 2rem;
       font-weight: 300;
       display: flex;
@@ -103,13 +105,13 @@ export const ProjectContainer = styled.div<ProjectProps>`
     }
 
     h1 {
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.colors.secondary};
       font-size: 2.5rem;
       text-shadow: -4px 5px 22px #11172b;
     }
 
     h2 {
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.colors.secondary};
       font-size: 2rem;
       font-weight: 300;
       text-shadow: -4px 5px 22px #11172b;

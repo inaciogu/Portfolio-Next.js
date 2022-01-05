@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import Prismic from '@prismicio/client';
 import ProjectsContainer from '../../styles/ProjectStyles';
-import Header from '../../components/Header';
 import ProjectItem from '../../components/ProjectItem';
 import getPrismicClient from '../../services/prismic';
 
@@ -37,7 +36,6 @@ export default function Projects({ projects }: ProjectProps) {
         />
       </Head>
       <ProjectsContainer>
-        <Header />
         <main className="container">
           {projects.map(project => (
             <ProjectItem

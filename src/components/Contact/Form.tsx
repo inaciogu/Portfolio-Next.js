@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import sendContactMail from '../../services/sendMail';
-import theme from '../../styles/theme';
+import theme from '../../styles/theme/dark';
 import { FormContainer, Input, TextArea } from './styles';
 
 export default function Form() {
@@ -16,7 +16,7 @@ export default function Form() {
     if (!name || !message || !email) {
       toast('Preencha todos os campos para enviar seu E-mail', {
         style: {
-          background: theme.error,
+          background: theme.colors.error,
           color: '#fff'
         }
       });
@@ -32,14 +32,14 @@ export default function Form() {
 
       toast('E-mail enviado com sucesso', {
         style: {
-          background: theme.secondary,
+          background: theme.colors.secondary,
           color: '#fff'
         }
       });
     } catch (error) {
       toast('Ocorreu um erro ao enviar o E-mail, tente novamente', {
         style: {
-          background: theme.error,
+          background: theme.colors.error,
           color: '#fff'
         }
       });

@@ -16,13 +16,13 @@ const Container = styled.div<ContainerProps>`
     align-items: flex-end;
     justify-content: flex-start;
     border-radius: 0.5rem;
-    border: 1px solid ${({ theme }) => theme.border};
+    border: 1px solid ${({ theme }) => theme.colors.border};
     transition: 0.5rem;
     cursor: pointer;
     overflow: hidden;
 
     &:hover {
-      border-color: ${({ theme }) => theme.primary};
+      border-color: ${({ theme }) => theme.colors.primary};
     }
 
     section {
@@ -32,7 +32,7 @@ const Container = styled.div<ContainerProps>`
         font-size: 1.5rem;
       }
       h2 {
-        color: ${({ theme }) => theme.secondary};
+        color: ${({ theme }) => theme.colors.secondary};
         font-size: 1rem;
       }
     }

@@ -1,10 +1,9 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import Prismic from '@prismicio/client';
 import { useEffect } from 'react';
+import Prismic from '@prismicio/client';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import Header from '../components/Header';
 import HomeContainer from '../styles/HomeStyles';
 import HomeHero from '../components/HomeHero';
 import Projects from '../components/Projects/index';
@@ -47,7 +46,6 @@ export default function Home({ projects }: HomeProps) {
           content="Sou desenvolvedor Front End Jr. e esse é o meu portfólio web, contendo informações sobre mim e alguns projetos que desenvolvi"
         />
       </Head>
-      <Header />
       <main className="container">
         <HomeHero />
         <Projects projects={projects} />

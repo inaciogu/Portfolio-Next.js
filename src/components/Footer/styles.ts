@@ -4,7 +4,7 @@ const Container = styled.footer`
   width: 100%;
   display: flex;
   margin-top: 10rem;
-  border-top: 1px solid ${({ theme }) => theme.backgroundLight};
+  border-top: 1px solid ${({ theme }) => theme.colors.backgroundLight};
   height: 5rem;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@ const Container = styled.footer`
     button {
       background: none;
       border: none;
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.colors.secondary};
       text-transform: uppercase;
       font-weight: 300;
       font-size: 1.2rem;
@@ -29,13 +29,13 @@ const Container = styled.footer`
       svg {
         width: 2.3rem;
         height: 2.3rem;
-        color: ${({ theme }) => theme.text};
+        color: ${({ theme }) => theme.colors.text};
         cursor: pointer;
         transition: 0.5s;
         margin: 10px;
 
         &:hover {
-          color: ${({ theme }) => theme.primary};
+          color: ${({ theme }) => theme.colors.primary};
           transform: translateY(-20%);
         }
       }

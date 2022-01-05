@@ -11,7 +11,7 @@ export const Container = styled.header`
   justify-content: center;
   align-items: center;
   height: 4rem;
-  border-bottom: 1px solid ${({ theme }) => theme.backgroundLight};
+  box-shadow: 2px 2px 9px ${({ theme }) => theme.colors.border};
   ul {
     display: flex;
     gap: 2rem;
@@ -23,13 +23,13 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
   a {
     text-transform: uppercase;
     color: ${props =>
-      props.isActive ? props.theme.primary : props.theme.textHighlight};
+      props.isActive ? props.theme.colors.primary : props.theme.colors.text};
     transition: 0.5s;
     &:hover {
       color: ${props =>
         props.isActive
-          ? lighten(0.2, props.theme.primary)
-          : lighten(0.2, props.theme.textHighlight)};
+          ? lighten(0.2, props.theme.colors.primary)
+          : lighten(0.2, props.theme.colors.text)};
     }
   }
 `;

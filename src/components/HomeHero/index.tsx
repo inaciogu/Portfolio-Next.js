@@ -25,37 +25,37 @@ function HomeHero() {
               </p>
             </InfoItem>
             <InfoItem data-aos="zoom-in">
-              <span className="purple">Infos:</span> {'\u007B'}
+              <span className="secondary">Infos:</span> {'\u007B'}
               <div>
-                Nome: <span className="primary">Gustavo,</span>
+                Nome: <span className="textLight">Gustavo,</span>
               </div>
               <div>
-                Sobrenome: <span className="secondary">Inacio,</span>
+                Sobrenome: <span>Inacio,</span>
               </div>
               <div>
-                Idade: <span className="purple">20 anos,</span>
+                Idade: <span>20 anos,</span>
               </div>
               <div>
-                Cidade: <span className="blue">Imbituba,</span>
+                Cidade: <span>Imbituba,</span>
               </div>
               <div>
-                Estado: <span className="yellow">Santa Catarina,</span>
+                Estado: <span>Santa Catarina,</span>
               </div>
               {'\u007D'}
             </InfoItem>
             <InfoItem data-aos="zoom-in">
-              <span className="purple">Soft Skills:</span> {'\u007B'}
+              <span className="secondary">Soft Skills:</span> {'\u007B'}
               <div>
-                <span className="blue">Autodidatismo,</span>
+                <span>Autodidatismo,</span>
               </div>
               <div>
-                <span className="green">Comunicação,</span>
+                <span>Comunicação,</span>
               </div>
               <div>
-                <span className="yellow">Pensamento Crítico,</span>
+                <span>Pensamento Crítico,</span>
               </div>
               <div>
-                <span className="primary">Trabalho em Equipe,</span>
+                <span>Trabalho em Equipe,</span>
               </div>
               {'\u007D'}
             </InfoItem>

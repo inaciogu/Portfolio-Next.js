@@ -21,14 +21,14 @@ const Container = styled.div`
   }
 
   > button {
-    background: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.colors.primary};
     padding: 0.8rem 1rem;
     border-radius: 0.5rem;
     border: none;
     transition: 0.5s;
 
     &:hover {
-      background: ${({ theme }) => darken(0.1, theme.secondary)};
+      background: ${({ theme }) => darken(0.1, theme.colors.secondary)};
     }
 
     a {

@@ -14,13 +14,13 @@ const ProjectContainer = styled.div`
     padding: 0 5rem;
 
     p {
-      color: ${({ theme }) => theme.textLight};
+      color: ${({ theme }) => theme.colors.text};
       font-size: 1.5rem;
       font-weight: 300;
       text-align: justify;
     }
     button {
-      background: ${({ theme }) => theme.primary};
+      background: ${({ theme }) => theme.colors.primary};
       padding: 0.8rem 1rem;
       border-radius: 0.5rem;
       border: none;
@@ -28,7 +28,7 @@ const ProjectContainer = styled.div`
       margin-top: 2rem;
 
       &:hover {
-        background: ${({ theme }) => darken(0.05, theme.primary)};
+        background: ${({ theme }) => darken(0.05, theme.colors.primary)};
       }
 
       a {
