@@ -1,5 +1,5 @@
 import { AiFillHtml5 } from 'react-icons/ai';
-import { SiRedux, SiTestinglibrary } from 'react-icons/si';
+import { SiNextdotjs, SiRedux, SiTestinglibrary } from 'react-icons/si';
 import { DiJavascript, DiGit, DiGithubBadge } from 'react-icons/di';
 import { FaCss3Alt, FaReact } from 'react-icons/fa';
 import SectionTitle from '../SectionTitle';
@@ -19,6 +19,7 @@ function Knowledge() {
         <KnowledgeItem title="RTL" icon={<SiTestinglibrary />} />
         <KnowledgeItem title="Git" icon={<DiGit />} />
         <KnowledgeItem title="Github" icon={<DiGithubBadge />} />
+        <KnowledgeItem title="NextJS" icon={<SiNextdotjs />} />
       </section>
     </Container>
   );

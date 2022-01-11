@@ -104,7 +104,7 @@ export const InfoItem = styled.div`
   transition: 1s !important;
 
   @media (max-width: 1200px) {
-    width: 18rem;
+    width: 23rem;
     padding: 1.5rem;
     font-size: 0.8rem;
   }
@@ -119,12 +119,10 @@ export const InfoItem = styled.div`
 
   &:nth-child(2) {
     align-self: center;
-    width: 23rem;
   }
 
   &:last-child {
     align-self: flex-start;
-    width: 23rem;
   }
 
   > div {
@@ -145,7 +143,7 @@ export const InfoItem = styled.div`
   }
 
   span.red {
-    color: #E51713;
+    color: #e51713;
   }
 
   span.texthigh {
@@ -153,7 +151,7 @@ export const InfoItem = styled.div`
   }
 
   span.pink {
-    color: #C40685;
+    color: #c40685;
   }
 
   span.primary {

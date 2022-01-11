@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { BsSun, BsMoonStars } from 'react-icons/bs'
+import { BsSun, BsMoonStars } from 'react-icons/bs';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import NavLink from './NavLink';
@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
         <NavLink title="Início" path="/" />
         <NavLink title="Projetos" path="/projects" includes />
       </ul>
-      { title === 'light' ? <BsSun size={20} /> : <BsMoonStars size={20} /> }
+      {title === 'light' ? <BsSun size={20} /> : <BsMoonStars size={20} />}
       <Switch
         onChange={() => toggleTheme()}
         checked={title === 'dark'}
@@ -29,6 +29,6 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
       />
     </Container>
   );
-}
+};
 
 export default Header;
