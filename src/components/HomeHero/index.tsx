@@ -39,7 +39,7 @@ function HomeHero() {
                 Cidade: <span className="pink">Imbituba,</span>
               </div>
               <div>
-                Estado: <span className="black">Santa Catarina,</span>
+                Estado: <span className="black">Santa Catarina</span>
               </div>
               {'\u007D'}
             </InfoItem>
@@ -56,6 +56,9 @@ function HomeHero() {
               </div>
               <div>
                 <span className="secondary">Trabalho em Equipe,</span>
+              </div>
+              <div>
+                <span className="black">Proatividade</span>
               </div>
               {'\u007D'}
             </InfoItem>

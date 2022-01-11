@@ -1,4 +1,3 @@
-import { darken } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.section`
@@ -101,6 +100,7 @@ export const InfoItem = styled.div`
   font-weight: 500;
   color: ${({ theme }) => theme.colors.text};
   align-self: flex-start;
+  width: 26rem;
   transition: 1s !important;
 
   @media (max-width: 1200px) {
@@ -159,7 +159,7 @@ export const InfoItem = styled.div`
   }
 
   span.secondary {
-    color: ${({ theme }) => darken(0.3, theme.colors.secondary)};
+    color: #d70f4e;
   }
 
   span.green {
