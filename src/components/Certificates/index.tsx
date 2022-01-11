@@ -19,6 +19,12 @@ function Certificates() {
           institution="TRYBE"
           imgUrl="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/38013710"
         />
+        <CertificateItem
+          title="Introdução ao TypeScript"
+          link="https://certificates.digitalinnovation.one/988E4E1B"
+          institution="Digital Innovation One"
+          imgUrl="https://hermes.digitalinnovation.one/certificates/cover/988E4E1B.jpg"
+        />
       </section>
     </Container>
   );

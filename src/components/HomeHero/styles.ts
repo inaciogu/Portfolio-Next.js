@@ -98,7 +98,7 @@ export const InfoItem = styled.div`
   background: ${({ theme }) => theme.colors.gradient};
   padding: 2rem;
   font-family: 'JetBrains Mono,', monospace;
-  font-weight: 300;
+  font-weight: 500;
   color: ${({ theme }) => theme.colors.text};
   align-self: flex-start;
   transition: 1s !important;
@@ -144,6 +144,18 @@ export const InfoItem = styled.div`
     color: #7ac7e3;
   }
 
+  span.red {
+    color: #E51713;
+  }
+
+  span.texthigh {
+    color: ${({ theme }) => theme.colors.textHighlight};
+  }
+
+  span.pink {
+    color: #C40685;
+  }
+
   span.primary {
     color: ${({ theme }) => theme.colors.primary};
   }
@@ -154,6 +166,10 @@ export const InfoItem = styled.div`
 
   span.green {
     color: green;
+  }
+
+  span.black {
+    color: black;
   }
 
   section.about {

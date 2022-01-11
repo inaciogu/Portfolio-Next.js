@@ -51,6 +51,5 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "packageManager": "yarn@3.1.0",
-  "type": "module"
+  "packageManager": "yarn@3.1.0"
 }

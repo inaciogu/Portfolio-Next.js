@@ -1,4 +1,3 @@
-import { lighten } from 'polished';
 import styled from 'styled-components';
 
 interface NavLinkProps {
@@ -15,7 +14,12 @@ export const Container = styled.header`
   ul {
     display: flex;
     gap: 2rem;
+    margin: 1.5rem;
     align-items: center;
+  }
+  > svg {
+    color: ${({ theme }) => theme.colors.secondary};
+    width: 2rem;
   }
 `;
 
@@ -28,8 +32,8 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     &:hover {
       color: ${props =>
         props.isActive
-          ? lighten(0.2, props.theme.colors.primary)
-          : lighten(0.2, props.theme.colors.text)};
+          ? props.theme.colors.secondary
+          : props.theme.colors.primary};
     }
   }
 `;
