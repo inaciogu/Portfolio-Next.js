@@ -4,6 +4,7 @@ import Prismic from '@prismicio/client';
 import ProjectsContainer from '../../styles/ProjectStyles';
 import ProjectItem from '../../components/ProjectItem';
 import getPrismicClient from '../../services/prismic';
+import Header from '../../components/Header';
 
 interface IProject {
   slug: string;
@@ -20,6 +21,7 @@ interface ProjectProps {
 export default function Projects({ projects }: ProjectProps) {
   return (
     <div>
+      <Header />
       <Head>
         <title>Projetos | Portfólio Web</title>
         <meta

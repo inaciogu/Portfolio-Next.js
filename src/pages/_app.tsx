@@ -1,20 +1,13 @@
-import { ThemeProvider } from 'styled-components';
 import NextNProgress from 'nextjs-progressbar';
-import { useState } from 'react';
+import { useContext } from 'react';
 import { Toaster } from 'react-hot-toast';
-import Header from '../components/Header';
+import { Context, ContextProvider } from '../context';
 import GlobalStyles from '../styles/global';
-import light from '../styles/theme/light';
-import dark from '../styles/theme/dark';
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState(dark);
-  const toggleTheme = () => {
-    setTheme(theme.title === 'light' ? dark : light);
-  };
+  const { theme } = useContext(Context);
   return (
-    <ThemeProvider theme={theme}>
-      <Header toggleTheme={toggleTheme} />
+    <ContextProvider>
       <NextNProgress
         color={theme.colors.primary}
         startPosition={0.3}
@@ -25,7 +18,7 @@ function MyApp({ Component, pageProps }) {
       <Toaster position="bottom-right" />
       <Component {...pageProps} />
       <GlobalStyles />
-    </ThemeProvider>
+    </ContextProvider>
   );
 }
 

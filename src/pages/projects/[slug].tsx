@@ -6,6 +6,7 @@ import ProjectBanner from '../../components/ProjectBanner';
 import getPrismicClient from '../../services/prismic';
 import ProjectContainer from '../../styles/ProjectStyle';
 import Loading from '../../components/Loading';
+import Header from '../../components/Header';
 
 interface IProject {
   slug: string;
@@ -27,6 +28,7 @@ export default function Project({ project }: ProjectProps) {
   }
   return (
     <ProjectContainer>
+      <Header />
       <Head>
         <title>{project.title} | Portfólio Web</title>
         <meta name="description" content={project.description} />
