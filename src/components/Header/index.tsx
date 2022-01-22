@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { BsSun, BsMoonStars } from 'react-icons/bs';
 import Switch from 'react-switch';
 import { Context } from '../../context/index';
@@ -13,11 +13,8 @@ const Header = () => {
         <NavLink title="Início" path="/" />
         <NavLink title="Projetos" path="/projects" includes />
       </ul>
-      {theme.title === 'light' ? (
-        <BsSun size={20} />
-      ) : (
-        <BsMoonStars size={20} />
-      )}
+      {theme.title === 'light' && <BsSun size={20} />}
+      {theme.title === 'dark' && <BsMoonStars size={20} />}
       <Switch
         onChange={() => toggleTheme()}
         checked={theme.title === 'dark'}

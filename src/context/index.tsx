@@ -9,7 +9,10 @@ const cookies = parseCookies();
 const userTheme = cookies.USER_THEME;
 
 const DEFAULT_VALUE = {
-  theme: userTheme === 'light' ? light : dark,
+  theme: {
+    title: userTheme === 'light' ? light.title : dark.title,
+    colors: userTheme === 'light' ? light.colors : dark.colors
+  },
   toggleTheme: () => {}
 };
 
