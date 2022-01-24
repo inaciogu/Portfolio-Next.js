@@ -1,3 +1,4 @@
+import { lighten } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.section`
@@ -12,7 +13,7 @@ export const Container = styled.section`
   img {
     width: 30rem;
     flex: 1;
-    box-shadow: 40px -50px 0px ${({ theme }) => theme.colors.primary};
+    box-shadow: 30px -30px 0px ${({ theme }) => lighten(0.07, theme.colors.primary)};
   }
 
   > div {
@@ -22,7 +23,7 @@ export const Container = styled.section`
   @media (max-width: 1450px) {
     img {
       width: 30rem;
-      height: 35rem;
+      height: 30rem;
     }
 
     > div {
@@ -32,7 +33,7 @@ export const Container = styled.section`
 
   @media (max-width: 1000px) {
     img {
-      width: 20rem;
+      width: 21rem;
     }
   }
 
@@ -102,6 +103,10 @@ export const InfoItem = styled.div`
   align-self: flex-start;
   width: 26rem;
   transition: 1s !important;
+
+  > p {
+    text-align: start;
+  }
 
   @media (max-width: 1200px) {
     width: 23rem;

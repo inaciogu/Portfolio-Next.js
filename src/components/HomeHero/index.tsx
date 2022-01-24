@@ -25,42 +25,24 @@ function HomeHero() {
               </p>
             </InfoItem>
             <InfoItem data-aos="zoom-in">
-              <span className="secondary">Infos:</span> {'\u007B'}
-              <div>
-                Nome: <span className="secondary">Gustavo,</span>
-              </div>
-              <div>
-                Sobrenome: <span className="green">Inacio,</span>
-              </div>
-              <div>
-                Idade: <span className="yellow">20 anos,</span>
-              </div>
-              <div>
-                Cidade: <span className="pink">Imbituba,</span>
-              </div>
-              <div>
-                Estado: <span className="black">Santa Catarina</span>
-              </div>
-              {'\u007D'}
+              <p>
+                Na minha trajetoria como estudante, tenho trabalhado com
+                metodologias ágeis de desenvolvimento, de maneira prática, em
+                projetos em grupo e através de aulas voltadas ás soft skills no
+                curso da Trybe. Essas experiências serviram para me mostrar a
+                importancia de se ter um padrão organizacional de
+                desenvolvimento.
+              </p>
             </InfoItem>
             <InfoItem data-aos="zoom-in">
-              <span className="secondary">Soft Skills:</span> {'\u007B'}
-              <div>
-                <span className="green">Autodidatismo,</span>
-              </div>
-              <div>
-                <span className="pink">Comunicação,</span>
-              </div>
-              <div>
-                <span className="yellow">Pensamento Crítico,</span>
-              </div>
-              <div>
-                <span className="secondary">Trabalho em Equipe,</span>
-              </div>
-              <div>
-                <span className="black">Proatividade</span>
-              </div>
-              {'\u007D'}
+              <p>
+                Atualmente, estou me aprofundando no <strong>Back End</strong>,
+                utilizando Node.js e express para criar APIs rest que se
+                comunicam diretamente com bancos de dados, até o momento tive
+                contato apenas com MySQL. Estou em busca de me tornar um
+                desenvolvedor full stack, pois gosto muito das duas vertentes e
+                pretendo, no futuro, trabalhar com as duas.
+              </p>
             </InfoItem>
           </InfosContainer>
         </TextContainer>
