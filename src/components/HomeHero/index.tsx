@@ -13,10 +13,10 @@ function HomeHero() {
   };
   return (
     <Container data-aos="fade-right">
-      <div>
+      <div className="animation">
         <Lottie
           options={defaultOptions}
-          height={450}
+          height={400}
           width={400}
           isStopped={false}
           isPaused={false}

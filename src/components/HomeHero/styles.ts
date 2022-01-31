@@ -19,6 +19,12 @@ export const Container = styled.section`
     }
   }
 
+  @media (max-width: 100px) {
+    > div.animation {
+      flex: 4;
+    }
+  }
+
   @media (max-width: 700px) {
     flex-direction: column-reverse;
     > div {

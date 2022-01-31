@@ -11,14 +11,18 @@ export const WelcomeContainer = styled.section`
   flex-direction: column;
   margin-top: 0.5rem;
 
-  > div.animation {
+  div.animation {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
+
+    > h1 {
+      flex: 1;
+    }
   }
 
   h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     color: ${({ theme }) => theme.colors.primary};
   }
 
@@ -28,12 +32,8 @@ export const WelcomeContainer = styled.section`
     }
   }
   @media (max-width: 1000px) {
-    > div.animation {
-      flex: 1
-      flex-direction: column;
-    }
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 `;
