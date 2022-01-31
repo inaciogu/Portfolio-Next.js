@@ -13,6 +13,7 @@ import Footer from '../components/Footer';
 import getPrismicClient from '../services/prismic';
 import Certificates from '../components/Certificates';
 import Header from '../components/Header/index';
+import Welcome from '../components/Welcome';
 
 interface IProject {
   slug: string;
@@ -49,6 +50,7 @@ export default function Home({ projects }: HomeProps) {
       </Head>
       <Header />
       <main className="container">
+        <Welcome />
         <HomeHero />
         <Projects projects={projects} />
         <Certificates />

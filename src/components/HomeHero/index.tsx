@@ -1,12 +1,26 @@
+import Lottie from 'react-lottie';
 import { Container, TextContainer, InfoItem, InfosContainer } from './styles';
-
-import picture from '../../assets/foto.jpeg';
+import animationData from './animation.json';
 
 function HomeHero() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
   return (
     <Container data-aos="fade-right">
       <div>
-        <img src={picture} alt="" />
+        <Lottie
+          options={defaultOptions}
+          height={400}
+          width={400}
+          isStopped={false}
+          isPaused={false}
+        />
       </div>
       <div>
         <TextContainer>
