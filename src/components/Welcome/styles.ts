@@ -7,13 +7,14 @@ export const Container = styled.div`
 
 export const WelcomeContainer = styled.section`
   display: flex;
+  width: 100%;
   flex-direction: column;
   margin-top: 0.5rem;
 
-  div.animation {
+  > div.animation {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
   }
 
   h1 {
@@ -27,7 +28,8 @@ export const WelcomeContainer = styled.section`
     }
   }
   @media (max-width: 1000px) {
-    div.animation {
+    > div.animation {
+      flex: 1
       flex-direction: column;
     }
     h1 {

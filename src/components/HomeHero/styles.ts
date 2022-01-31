@@ -1,4 +1,3 @@
-import { lighten } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.section`
@@ -10,30 +9,13 @@ export const Container = styled.section`
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.colors.text};
 
-  img {
-    width: 30rem;
-    flex: 1;
-    box-shadow: 30px -30px 0px ${({ theme }) => lighten(0.07, theme.colors.primary)};
-  }
-
   > div {
     flex: 4;
   }
 
   @media (max-width: 1450px) {
-    img {
-      width: 30rem;
-      height: 30rem;
-    }
-
     > div {
       flex: 1;
-    }
-  }
-
-  @media (max-width: 1000px) {
-    img {
-      width: 21rem;
     }
   }
 
@@ -41,11 +23,6 @@ export const Container = styled.section`
     flex-direction: column-reverse;
     > div {
       width: 100%;
-    }
-
-    > img {
-      width: 70%;
-      box-shadow: 60px -30px 0px ${({ theme }) => theme.colors.primary};
     }
   }
 `;

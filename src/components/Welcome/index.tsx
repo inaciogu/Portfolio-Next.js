@@ -20,7 +20,7 @@ function Welcome() {
           <Lottie
             options={defaultOptions}
             height={400}
-            width={480}
+            width={400}
             isStopped={false}
             isPaused={false}
           />
