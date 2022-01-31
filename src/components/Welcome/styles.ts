@@ -8,6 +8,7 @@ export const Container = styled.div`
 export const WelcomeContainer = styled.section`
   display: flex;
   flex-direction: column;
+  margin-top: 0.5rem;
 
   div.animation {
     display: flex;

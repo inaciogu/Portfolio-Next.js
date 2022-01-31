@@ -16,7 +16,7 @@ function HomeHero() {
       <div>
         <Lottie
           options={defaultOptions}
-          height={400}
+          height={450}
           width={400}
           isStopped={false}
           isPaused={false}
