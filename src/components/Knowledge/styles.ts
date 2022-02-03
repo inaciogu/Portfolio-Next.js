@@ -40,13 +40,25 @@ export const KnowledgeContainer = styled.div`
     height: 6.5rem;
     color: ${({ theme }) => theme.colors.primary};
     transition: 0.3s;
+    animation: degrade 3s linear infinite;
   }
 
-  &:hover {
+  /* &:hover {
     svg {
       transform: scale(0.95);
       color: ${({ theme }) => theme.colors.secondary};
       transition: 1s;
+    }
+  } */
+
+  @keyframes degrade {
+    from {
+      color: ${({ theme }) => theme.colors.primary};
+      transform: rotatey(-90deg);
+    }
+    to {
+      color: ${({ theme }) => theme.colors.secondary};
+      transform: rotatey(90deg);
     }
   }
 

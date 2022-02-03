@@ -9,19 +9,13 @@ export const Container = styled.section`
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.colors.text};
 
-  > div {
-    flex: 4;
+  div.animation {
+    width: 100%;
   }
 
   @media (max-width: 1450px) {
     > div {
       flex: 1;
-    }
-  }
-
-  @media (max-width: 100px) {
-    > div.animation {
-      flex: 4;
     }
   }
 

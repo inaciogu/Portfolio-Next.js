@@ -57,39 +57,13 @@ export const ProjectContainer = styled.div<ProjectProps>`
   width: 100%;
   display: flex;
   height: 25rem;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
 
-  &:hover {
-    > section {
-      > div.text {
-        right: -15rem;
-      }
-    }
-
-    > button a {
-      color: ${({ theme }) => theme.colors.primary};
-    }
-  }
-
-  > button {
-    height: 4rem;
-    margin: 0 0 3rem 5rem;
-    background: none;
-    border: none;
-
-    a {
-      color: ${({ theme }) => theme.colors.text};
-      font-size: 2rem;
-      font-weight: 300;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      transition: 0.5s;
-    }
-  }
-
   > section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40rem;
     height: 100%;
     background: url(${props => props.imgSrc}) no-repeat center;
@@ -115,6 +89,40 @@ export const ProjectContainer = styled.div<ProjectProps>`
       font-size: 2rem;
       font-weight: 300;
       text-shadow: -4px 5px 8px #11172b;
+    }
+
+    > button {
+      z-index: 5;
+      padding: 0.5rem 1rem;
+      position: absolute;
+      background: none;
+      border: 1px solid ${({ theme }) => theme.colors.primary};
+      border-radius: 0.5rem;
+
+      a {
+        color: ${({ theme }) => theme.colors.primary};
+        font-size: 1.5rem;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        transition: 0.5s;
+      }
+
+      &:hover {
+        background: ${({ theme }) => theme.colors.primary};
+        > a {
+          color: ${({ theme }) => theme.colors.text};
+        }
+      }
+    }
+  }
+
+  &:hover {
+    > section {
+      > div.text {
+        right: -15rem;
+      }
     }
   }
 

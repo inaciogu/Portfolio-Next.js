@@ -16,8 +16,8 @@ function HomeHero() {
       <div className="animation">
         <Lottie
           options={defaultOptions}
-          height={400}
-          width={400}
+          height={420}
+          width={300}
           isStopped={false}
           isPaused={false}
         />
