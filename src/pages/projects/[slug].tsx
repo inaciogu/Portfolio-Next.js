@@ -2,9 +2,11 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Prismic from '@prismicio/client';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { BsGithub } from 'react-icons/bs';
+import { AiOutlineGlobal } from 'react-icons/ai';
 import ProjectBanner from '../../components/ProjectBanner';
 import getPrismicClient from '../../services/prismic';
-import ProjectContainer from '../../styles/ProjectStyle';
+import ProjectContainer, { ProjectButton } from '../../styles/ProjectStyle';
 import Loading from '../../components/Loading';
 import Header from '../../components/Header';
 
@@ -15,6 +17,7 @@ interface IProject {
   description: string;
   thumb: string;
   link: string;
+  ghLink: string;
 }
 
 interface ProjectProps {
@@ -46,11 +49,16 @@ export default function Project({ project }: ProjectProps) {
       />
       <main>
         <p>{project.description}</p>
-        <button type="button">
+        <ProjectButton github={false} type="button">
           <a target="_blank" href={project.link} rel="noreferrer">
-            Ver projeto online
+            <AiOutlineGlobal /> Projeto online
           </a>
-        </button>
+        </ProjectButton>
+        <ProjectButton github type="button">
+          <a target="_blank" href={project.ghLink} rel="noreferrer">
+            <BsGithub /> Repositório do Projeto
+          </a>
+        </ProjectButton>
       </main>
     </ProjectContainer>
   );
@@ -85,7 +93,8 @@ export const getStaticProps: GetStaticProps = async context => {
     type: response.data.type,
     description: response.data.description,
     link: response.data.link.url,
-    thumb: response.data.thumb.url
+    thumb: response.data.thumb.url,
+    ghLink: response.data.gh_link.url
   };
 
   return {

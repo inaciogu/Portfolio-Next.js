@@ -1,5 +1,9 @@
-import { darken } from 'polished';
+import { darken, lighten } from 'polished';
 import styled from 'styled-components';
+
+interface ProjectButtonProps {
+  github: boolean;
+}
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -19,25 +23,6 @@ const ProjectContainer = styled.div`
       font-weight: 300;
       text-align: justify;
     }
-    button {
-      background: ${({ theme }) => theme.colors.primary};
-      padding: 0.8rem 1rem;
-      border-radius: 0.5rem;
-      border: none;
-      transition: 0.5s;
-      margin-top: 2rem;
-
-      &:hover {
-        background: ${({ theme }) => darken(0.05, theme.colors.primary)};
-      }
-
-      a {
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        font-weight: 300;
-      }
-    }
     @media (max-width: 700px) {
       padding: 0 2.5rem;
       p {
@@ -51,6 +36,32 @@ const ProjectContainer = styled.div`
         }
       }
     }
+  }
+`;
+
+export const ProjectButton = styled.button<ProjectButtonProps>`
+  background: ${props => (props.github ? 'black' : props.theme.colors.primary)};
+  padding: 0.8rem 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  transition: 0.5s;
+  margin-right: 0.1rem;
+  margin-top: 2rem;
+
+  &:hover {
+    background: ${props =>
+      props.github
+        ? lighten(0.08, 'black')
+        : darken(0.05, props.theme.colors.primary)};
+  }
+
+  a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
   }
 `;
 
