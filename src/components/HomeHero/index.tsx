@@ -17,7 +17,7 @@ function HomeHero() {
         <Lottie
           options={defaultOptions}
           height={420}
-          width={300}
+          width={400}
           isStopped={false}
           isPaused={false}
         />
