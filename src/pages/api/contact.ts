@@ -25,7 +25,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       from: email,
       to: email,
       subject: `Nova mensagem de: ${name}`,
-      html: `<p><b>email;</b>${senderMail}<br /> <b>Mensagem</b> ${content}</p>`,
+      html: `<p><b>email: </b>${senderMail}<br /> <b>Mensagem: </b> <br /> ${content}</p>`,
       replyTo: senderMail
     };
 

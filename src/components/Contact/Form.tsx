@@ -31,13 +31,15 @@ export default function Form() {
       setMessage('');
 
       toast('E-mail enviado com sucesso', {
+        position: 'top-right',
         style: {
-          background: theme.colors.secondary,
+          background: theme.colors.primary,
           color: '#fff'
         }
       });
     } catch (error) {
       toast('Ocorreu um erro ao enviar o E-mail, tente novamente', {
+        position: 'top-right',
         style: {
           background: theme.colors.error,
           color: '#fff'
