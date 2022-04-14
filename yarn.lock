@@ -556,6 +556,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/nodemailer@npm:^6.4.4":
+  version: 6.4.4
+  resolution: "@types/nodemailer@npm:6.4.4"
+  dependencies:
+    "@types/node": "*"
+  checksum: 16ed1bad2cd8471fd3b026471e234da33ba3b65935dc44b31be3145eff7bdb067eb4d08ec4b41d23339b988075299abc1a0c0fe77b99f04ca235827bca95af81
+  languageName: node
+  linkType: hard
+
 "@types/parse-json@npm:^4.0.0":
   version: 4.0.0
   resolution: "@types/parse-json@npm:4.0.0"
@@ -7094,6 +7103,7 @@ __metadata:
   dependencies:
     "@prismicio/client": ^5.1.0
     "@types/node": ^15.3.0
+    "@types/nodemailer": ^6.4.4
     "@types/react": ^17.0.5
     "@types/styled-components": ^5.1.9
     "@typescript-eslint/eslint-plugin": ^4.23.0

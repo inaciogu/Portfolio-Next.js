@@ -8,14 +8,10 @@ const email = process.env.MAILADRESS;
 const transporter = nodemailer.createTransport(
   sendGridTransport({
     auth: {
-      api_key:
-        process.env.SENDGRID_API_KEY ||
-        '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'
+      api_key: process.env.SENDGRID_API_KEY
     }
   })
 );
-
-console.log(process.env.SENDGRID_API_KEY);
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
@@ -40,7 +36,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         console.log(info);
       }
     });
-    return res.send('Email sent!');
+    return res.status(201).json({ message: 'Email sent!' });
   } catch (error) {
     return res.status(400).json({
       error: true,
