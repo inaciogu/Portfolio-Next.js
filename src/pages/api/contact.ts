@@ -15,6 +15,8 @@ const transporter = nodemailer.createTransport(
   })
 );
 
+console.log(process.env.SENDGRID_API_KEY);
+
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { senderMail, name, content } = req.body;
