@@ -8,7 +8,9 @@ const email = process.env.MAILADRESS;
 const transporter = nodemailer.createTransport(
   sendGridTransport({
     auth: {
-      api_key: process.env.SENDGRID_API_KEY
+      api_key:
+        process.env.SENDGRID_API_KEY ||
+        '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'
     }
   })
 );
