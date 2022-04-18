@@ -4,7 +4,6 @@ import styled from 'styled-components';
 export const Container = styled.section``;
 
 export const FormContainer = styled.form`
-  margin-top: 8rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -47,8 +46,8 @@ export const Input = styled.input`
   height: 3rem;
   width: 100%;
   padding: 1.7rem 1.5rem;
-  background: ${({ theme }) => theme.colors.inputBackground};
-  border: 1px solid ${({ theme }) => theme.colors.border};
+  background: none;
+  border: 1px solid ${({ theme }) => theme.colors.textLight};
   color: ${({ theme }) => theme.colors.primary};
   border-radius: 0.5rem;
   font-size: 1.2rem;
@@ -72,8 +71,8 @@ export const TextArea = styled.textarea`
   height: 10rem;
   width: 100%;
   padding: 1.7rem 1.5rem;
-  background: ${({ theme }) => theme.colors.inputBackground};
-  border: 1px solid ${({ theme }) => theme.colors.border};
+  background: none;
+  border: 1px solid ${({ theme }) => theme.colors.textLight};
   color: ${({ theme }) => theme.colors.primary};
   border-radius: 0.5rem;
   font-size: 1.2rem;

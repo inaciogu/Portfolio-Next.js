@@ -1,10 +1,16 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import { Dialog, DialogTitle, Stack } from '@mui/material';
 import sendContactMail from '../../services/sendMail';
 import theme from '../../styles/theme/dark';
 import { FormContainer, Input, TextArea } from './styles';
 
-export default function Form() {
+interface FormProps {
+  open: boolean;
+  onClose: () => void;
+}
+
+export default function Form({ open, onClose }: FormProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -50,25 +56,33 @@ export default function Form() {
     }
   };
   return (
-    <FormContainer data-aos="fade-up" onSubmit={handleSubmit}>
-      <Input
-        placeholder="Nome"
-        value={name}
-        onChange={({ target }) => setName(target.value)}
-      />
-      <Input
-        placeholder="E-mail"
-        value={email}
-        onChange={({ target }) => setEmail(target.value)}
-      />
-      <TextArea
-        placeholder="Mensagem"
-        value={message}
-        onChange={({ target }) => setMessage(target.value)}
-      />
-      <button type="submit" disabled={loading}>
-        Enviar
-      </button>
-    </FormContainer>
+    <Dialog open={open} onClose={onClose}>
+      <Stack
+        p={2}
+        sx={{ background: 'linear-gradient(45deg, #202020, #101010);' }}
+      >
+        <DialogTitle sx={{ color: '#fff' }}>Mande sua Mensagem</DialogTitle>
+        <FormContainer data-aos="fade-up" onSubmit={handleSubmit}>
+          <Input
+            placeholder="Nome"
+            value={name}
+            onChange={({ target }) => setName(target.value)}
+          />
+          <Input
+            placeholder="E-mail"
+            value={email}
+            onChange={({ target }) => setEmail(target.value)}
+          />
+          <TextArea
+            placeholder="Mensagem"
+            value={message}
+            onChange={({ target }) => setMessage(target.value)}
+          />
+          <button type="submit" disabled={loading}>
+            Enviar
+          </button>
+        </FormContainer>
+      </Stack>
+    </Dialog>
   );
 }

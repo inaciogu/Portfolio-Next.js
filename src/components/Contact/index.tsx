@@ -1,8 +1,12 @@
+import { Button } from '@mui/material';
+import { useState } from 'react';
 import SectionTitle from '../SectionTitle';
 import Form from './Form';
 import { Container } from './styles';
 
 function Contact() {
+  const [open, setOpen] = useState(false);
+
   return (
     <Container id="contact">
       <SectionTitle
@@ -14,12 +18,13 @@ function Contact() {
           </>
         }
         description={
-          <>
-            Preencha o formulário abaixo <br />e eu retornarei em breve!
-          </>
+          <>Você pode me enviar um e-mail clicando no botão abaixo</>
         }
       />
-      <Form />
+      <Button variant="contained" color="primary" onClick={() => setOpen(true)}>
+        Enviar E-mail
+      </Button>
+      <Form open={open} onClose={() => setOpen(false)} />
     </Container>
   );
 }
