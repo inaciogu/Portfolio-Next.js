@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { AiOutlineMail, AiOutlineBlock } from 'react-icons/ai';
 import toast from 'react-hot-toast';
-import { Dialog, DialogTitle, Stack } from '@mui/material';
+import { Dialog, Stack } from '@mui/material';
 import sendContactMail from '../../services/sendMail';
 import theme from '../../styles/theme/dark';
 import { FormContainer, Input, TextArea } from './styles';
@@ -21,6 +22,7 @@ export default function Form({ open, onClose }: FormProps) {
 
     if (!name || !message || !email) {
       toast('Preencha todos os campos para enviar seu E-mail', {
+        icon: <AiOutlineBlock />,
         style: {
           background: theme.colors.error,
           color: '#fff'
@@ -38,6 +40,7 @@ export default function Form({ open, onClose }: FormProps) {
 
       toast('E-mail enviado com sucesso', {
         position: 'top-right',
+        icon: <AiOutlineMail />,
         style: {
           background: theme.colors.primary,
           color: '#fff'
@@ -46,6 +49,7 @@ export default function Form({ open, onClose }: FormProps) {
     } catch (error) {
       toast('Ocorreu um erro ao enviar o E-mail, tente novamente', {
         position: 'top-right',
+        icon: <AiOutlineBlock />,
         style: {
           background: theme.colors.error,
           color: '#fff'
@@ -58,10 +62,9 @@ export default function Form({ open, onClose }: FormProps) {
   return (
     <Dialog open={open} onClose={onClose}>
       <Stack
-        p={2}
+        p={4}
         sx={{ background: 'linear-gradient(45deg, #202020, #101010);' }}
       >
-        <DialogTitle sx={{ color: '#fff' }}>Mande sua Mensagem</DialogTitle>
         <FormContainer data-aos="fade-up" onSubmit={handleSubmit}>
           <Input
             placeholder="Nome"
