@@ -1,4 +1,3 @@
-import { darken, lighten } from 'polished';
 import styled from 'styled-components';
 
 interface ContainerProps {
