@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import Prismic from '@prismicio/client';
+import { AiFillApi, AiFillBook, AiOutlineGlobal } from 'react-icons/ai';
+import { useState } from 'react';
 import ProjectsContainer from '../../styles/ProjectStyles';
 import ProjectItem from '../../components/ProjectItem';
 import getPrismicClient from '../../services/prismic';
 import Header from '../../components/Header';
+import ProjectTabs from '../../components/ProjectTabs';
 
 interface IProject {
   slug: string;
@@ -19,6 +22,31 @@ interface ProjectProps {
 }
 
 export default function Projects({ projects }: ProjectProps) {
+  const [currentTab, setCurrentTab] = useState<string>('Todos');
+
+  const getProjectsByType = (type: string) => {
+    const selectedProjects = projects.filter(project => project.type === type);
+    return selectedProjects;
+  };
+
+  const TABS = [
+    {
+      value: 'Todos',
+      icon: <AiOutlineGlobal />,
+      component: <ProjectItem projects={projects} />
+    },
+    {
+      value: 'Frontend',
+      icon: <AiFillBook />,
+      component: <ProjectItem projects={getProjectsByType('Frontend')} />
+    },
+    {
+      value: 'Backend',
+      icon: <AiFillApi />,
+      component: <ProjectItem projects={getProjectsByType('Backend')} />
+    }
+  ];
+
   return (
     <div>
       <Header />
@@ -39,7 +67,11 @@ export default function Projects({ projects }: ProjectProps) {
       </Head>
       <ProjectsContainer>
         <main className="container">
-          <ProjectItem projects={projects} />
+          <ProjectTabs
+            tabs={TABS}
+            currentTab={currentTab}
+            onChangeTab={tab => setCurrentTab(tab)}
+          />
         </main>
       </ProjectsContainer>
     </div>
