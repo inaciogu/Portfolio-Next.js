@@ -5,9 +5,11 @@ interface ContainerProps {
 }
 
 const Container = styled.div<ContainerProps>`
+  width: 100%;
+  max-width: 70%;
+  margin: 0.5rem;
   > a {
     position: relative;
-    width: 100%;
     background: url(${props => props.imgUrl}) no-repeat center;
     background-size: cover;
     height: 10rem;

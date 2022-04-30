@@ -1,4 +1,4 @@
-import { Tabs, Tab, Box } from '@mui/material';
+import { Tabs, Tab, Box, Stack } from '@mui/material';
 
 type TabType = {
   value: string;
@@ -18,7 +18,7 @@ export default function ProjectTabs({
   onChangeTab
 }: TeamTabsProps) {
   return (
-    <Box alignItems="flex-start" ml={{ xs: 'inherit', md: 1 }}>
+    <Stack alignItems="center" width="100%">
       <Tabs
         value={currentTab}
         onChange={(_, value) => onChangeTab(value)}
@@ -41,9 +41,8 @@ export default function ProjectTabs({
 
       {tabs.map(tab => {
         const isMatched = tab.value === currentTab;
-
         return isMatched && tab.component;
       })}
-    </Box>
+    </Stack>
   );
 }

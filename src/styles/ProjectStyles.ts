@@ -2,24 +2,17 @@ import styled from 'styled-components';
 
 const ProjectContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  padding: 1rem;
+  justify-content: center;
   width: 100%;
   height: 100%;
 
   > main {
-    margin-top: 5rem;
+    justify-content: center;
+    margin-top: 3rem;
     margin-bottom: 5rem;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-
-    @media (max-width: 1000px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 550px) {
-      grid-template-columns: 1fr;
-    }
   }
 `;
 

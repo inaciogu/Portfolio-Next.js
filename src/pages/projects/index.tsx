@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import Prismic from '@prismicio/client';
 import { AiFillApi, AiFillBook, AiOutlineGlobal } from 'react-icons/ai';
 import { useState } from 'react';
-import ProjectsContainer from '../../styles/ProjectStyles';
+import { Container } from '@mui/material';
 import ProjectItem from '../../components/ProjectItem';
 import getPrismicClient from '../../services/prismic';
 import Header from '../../components/Header';
@@ -48,33 +48,31 @@ export default function Projects({ projects }: ProjectProps) {
   ];
 
   return (
-    <div>
+    <>
       <Header />
-      <Head>
-        <title>Projetos | Portfólio Web</title>
-        <meta
-          name="description"
-          content="Esta página contém os projetos que desenvolvi, cada um tem sua página única com informações relevantes"
-        />
-        <meta property="og:image" content="/ogimage.png" />
-        <meta property="og:image:secure_url" content="/ogimage.png" />
-        <meta name="twitter:image" content="/ogimage.png" />
-        <meta name="twitter:image:src" content="/ogimage.png" />
-        <meta
-          property="og:description"
-          content="Esta página contém os projetos que desenvolvi, cada um tem sua página única com informações relevantes"
-        />
-      </Head>
-      <ProjectsContainer>
-        <main className="container">
-          <ProjectTabs
-            tabs={TABS}
-            currentTab={currentTab}
-            onChangeTab={tab => setCurrentTab(tab)}
+      <Container maxWidth="lg">
+        <Head>
+          <title>Projetos | Portfólio Web</title>
+          <meta
+            name="description"
+            content="Esta página contém os projetos que desenvolvi, cada um tem sua página única com informações relevantes"
           />
-        </main>
-      </ProjectsContainer>
-    </div>
+          <meta property="og:image" content="/ogimage.png" />
+          <meta property="og:image:secure_url" content="/ogimage.png" />
+          <meta name="twitter:image" content="/ogimage.png" />
+          <meta name="twitter:image:src" content="/ogimage.png" />
+          <meta
+            property="og:description"
+            content="Esta página contém os projetos que desenvolvi, cada um tem sua página única com informações relevantes"
+          />
+        </Head>
+        <ProjectTabs
+          tabs={TABS}
+          currentTab={currentTab}
+          onChangeTab={tab => setCurrentTab(tab)}
+        />
+      </Container>
+    </>
   );
 }
 
