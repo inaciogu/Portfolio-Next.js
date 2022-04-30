@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import LoadingButton from '@mui/lab/LoadingButton';
 import { AiOutlineMail, AiOutlineBlock } from 'react-icons/ai';
 import toast from 'react-hot-toast';
-import { Dialog, Stack } from '@mui/material';
+import { Card, Dialog, Stack } from '@mui/material';
+import { darken } from 'polished';
+import { Context } from '../../context';
 import sendContactMail from '../../services/sendMail';
-import theme from '../../styles/theme/dark';
-import { FormContainer, Input, TextArea } from './styles';
+import { Input, TextArea } from './styles';
 
 interface FormProps {
   open: boolean;
@@ -12,6 +14,8 @@ interface FormProps {
 }
 
 export default function Form({ open, onClose }: FormProps) {
+  const { theme } = useContext(Context);
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -61,11 +65,8 @@ export default function Form({ open, onClose }: FormProps) {
   };
   return (
     <Dialog open={open} onClose={onClose}>
-      <Stack
-        p={4}
-        sx={{ background: 'linear-gradient(45deg, #202020, #101010);' }}
-      >
-        <FormContainer data-aos="fade-up" onSubmit={handleSubmit}>
+      <Card sx={{ background: theme.colors.gradient }}>
+        <Stack p={6} component="form" onSubmit={handleSubmit}>
           <Input
             placeholder="Nome"
             value={name}
@@ -81,11 +82,20 @@ export default function Form({ open, onClose }: FormProps) {
             value={message}
             onChange={({ target }) => setMessage(target.value)}
           />
-          <button type="submit" disabled={loading}>
+          <LoadingButton
+            type="submit"
+            loading={loading}
+            disabled={loading}
+            variant="contained"
+            sx={{
+              background: theme.colors.primary,
+              '&:hover': { background: darken(0.06, theme.colors.primary) }
+            }}
+          >
             Enviar
-          </button>
-        </FormContainer>
-      </Stack>
+          </LoadingButton>
+        </Stack>
+      </Card>
     </Dialog>
   );
 }
