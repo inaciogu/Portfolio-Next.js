@@ -1,3 +1,4 @@
+import { darken, lighten } from 'polished';
 import styled from 'styled-components';
 
 interface ContainerProps {
@@ -28,7 +29,7 @@ const Container = styled.div<ContainerProps>`
     section {
       z-index: 1;
       h1 {
-        color: white;
+        color: #fff;
         font-size: 1.5rem;
       }
       h2 {

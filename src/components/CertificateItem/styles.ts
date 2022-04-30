@@ -62,14 +62,12 @@ const CertificateContainer = styled.div<CertificateProps>`
     h1 {
       color: ${({ theme }) => theme.colors.primary};
       font-size: 2.5rem;
-      text-shadow: -4px 5px 10px #11172b;
     }
 
     h2 {
       color: ${({ theme }) => theme.colors.secondary};
       font-size: 2rem;
       font-weight: 400;
-      text-shadow: -4px 5px 10px #11172b;
     }
   }
   &:nth-child(even) {
