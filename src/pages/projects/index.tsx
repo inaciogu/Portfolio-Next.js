@@ -39,15 +39,7 @@ export default function Projects({ projects }: ProjectProps) {
       </Head>
       <ProjectsContainer>
         <main className="container">
-          {projects.map(project => (
-            <ProjectItem
-              key={project.slug}
-              type={project.type}
-              title={project.title}
-              slug={project.slug}
-              imgUrl={project.thumb}
-            />
-          ))}
+          <ProjectItem projects={projects} />
         </main>
       </ProjectsContainer>
     </div>

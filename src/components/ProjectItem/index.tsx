@@ -6,22 +6,30 @@ interface ProjectItemProps {
   title: string;
   type: string;
   slug: string;
-  imgUrl: string;
+  thumb: string;
 }
 
-function ProjectItem({ title, type, slug, imgUrl }: ProjectItemProps) {
+interface Project {
+  projects: ProjectItemProps[];
+}
+
+function ProjectItem({ projects }: Project) {
   return (
-    <Container imgUrl={imgUrl}>
-      <Link href={`/projects/${slug}`}>
-        <a>
-          <Overlay />
-          <section>
-            <h1>{title}</h1>
-            <h2>{type}</h2>
-          </section>
-        </a>
-      </Link>
-    </Container>
+    <>
+      {projects.map(project => (
+        <Container imgUrl={project.thumb}>
+          <Link href={`/projects/${project.slug}`}>
+            <a>
+              <Overlay />
+              <section>
+                <h1>{project.title}</h1>
+                <h2>{project.type}</h2>
+              </section>
+            </a>
+          </Link>
+        </Container>
+      ))}
+    </>
   );
 }
 
