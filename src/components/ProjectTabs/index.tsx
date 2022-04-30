@@ -1,4 +1,6 @@
 import { Tabs, Tab, Box, Stack } from '@mui/material';
+import { useContext } from 'react';
+import { Context } from '../../context';
 
 type TabType = {
   value: string;
@@ -17,6 +19,7 @@ export default function ProjectTabs({
   currentTab,
   onChangeTab
 }: TeamTabsProps) {
+  const { theme } = useContext(Context);
   return (
     <Stack alignItems="center" width="100%">
       <Tabs
@@ -33,6 +36,7 @@ export default function ProjectTabs({
             value={tab.value}
             icon={tab.icon}
             label={tab.value}
+            sx={{ color: theme.colors.text }}
           />
         ))}
       </Tabs>
