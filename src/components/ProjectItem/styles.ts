@@ -6,7 +6,7 @@ interface ContainerProps {
 
 const Container = styled.div<ContainerProps>`
   width: 100%;
-  max-width: 70%;
+  max-width: 20rem;
   margin: 0.5rem;
   > a {
     position: relative;
