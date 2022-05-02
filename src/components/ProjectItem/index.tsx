@@ -24,7 +24,7 @@ function ProjectItem({ projects }: Project) {
       width="100%"
     >
       {projects.map(project => (
-        <Container imgUrl={project.thumb}>
+        <Container key={project.slug} imgUrl={project.thumb}>
           <Link href={`/projects/${project.slug}`}>
             <a>
               <Overlay />
