@@ -101,7 +101,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
       a {
         color: ${({ theme }) => theme.colors.primary};
         font-size: 1.5rem;
-        font-weight: 300;
+        font-weight: 500;
         display: flex;
         align-items: center;
         gap: 0.8rem;
