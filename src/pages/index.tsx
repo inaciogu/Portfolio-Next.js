@@ -37,7 +37,7 @@ export default function Home({ projects }: HomeProps) {
         <title>Home | Portfólio Web</title>
         <meta
           name="description"
-          content="Sou desenvolvedor Front End Jr. e esse é o meu portfólio web, contendo informações sobre mim e alguns projetos que desenvolvi"
+          content="Sou desenvolvedor de software web e esse é o meu portfólio, contendo informações sobre mim e alguns projetos que desenvolvi"
         />
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
@@ -45,7 +45,7 @@ export default function Home({ projects }: HomeProps) {
         <meta name="twitter:image:src" content="/ogimage.png" />
         <meta
           property="og:description"
-          content="Sou desenvolvedor Front End Jr. e esse é o meu portfólio web, contendo informações sobre mim e alguns projetos que desenvolvi"
+          content="Sou desenvolvedor de software web e esse é o meu portfólio, contendo informações sobre mim e alguns projetos que desenvolvi"
         />
       </Head>
       <Header />
