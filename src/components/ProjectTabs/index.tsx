@@ -43,10 +43,12 @@ export default function ProjectTabs({
 
       <Box sx={{ mb: 5 }} />
 
-      {tabs.map(tab => {
-        const isMatched = tab.value === currentTab;
-        return isMatched && tab.component;
-      })}
+      <Box width="100%" display="flex" justifyContent="center" flexWrap="wrap">
+        {tabs.map(tab => {
+          const isMatched = tab.value === currentTab;
+          return isMatched && tab.component;
+        })}
+      </Box>
     </Stack>
   );
 }

@@ -17,7 +17,7 @@ export default createGlobalStyle`
     ::-webkit-scrollbar-track{
       background: grey;
     }
-  }
+  },
   body {
     background: ${props => props.theme.colors.backgroundGradient};
     background-attachment: fixed;
