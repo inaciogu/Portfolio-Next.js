@@ -35,10 +35,7 @@ export default function ProjectItem({
           zIndex={5}
           alignSelf={{ xs: 'flex-end', md: 'center' }}
         >
-          <IconButton
-            sx={{ color: theme.colors.background }}
-            onClick={decrement}
-          >
+          <IconButton sx={{ color: theme.colors.text }} onClick={decrement}>
             <FaArrowLeft size={50} />
           </IconButton>
           <IconButton sx={{ color: theme.colors.text }} onClick={increment}>
