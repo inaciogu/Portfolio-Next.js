@@ -57,6 +57,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
   width: 100%;
   display: flex;
   height: 25rem;
+  justify-content: center;
   align-items: center;
   position: relative;
 
@@ -64,7 +65,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40rem;
+    width: 100%;
     height: 100%;
     background: url(${props => props.imgSrc}) no-repeat center;
     background-size: cover;
