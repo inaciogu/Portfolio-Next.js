@@ -1,4 +1,7 @@
+import { LoadingButton } from '@mui/lab';
 import Lottie from 'react-lottie';
+import { AiOutlineFilePdf } from 'react-icons/ai';
+import { Box } from '@mui/material';
 import animationData from './animation.json';
 import ArrowDown from './Arrow';
 import { Container, WelcomeContainer } from './styles';
@@ -25,6 +28,18 @@ function Welcome() {
             isPaused={false}
           />
         </div>
+        <Box alignSelf="center">
+          <LoadingButton
+            color="error"
+            variant="contained"
+            type="download"
+            href="gustavocv1.pdf"
+            startIcon={<AiOutlineFilePdf />}
+            target="_blank"
+          >
+            Baixar curriculo
+          </LoadingButton>
+        </Box>
         <ArrowDown />
       </WelcomeContainer>
     </Container>
