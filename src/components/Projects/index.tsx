@@ -19,12 +19,14 @@ interface ProjectsProps {
 function Projetos({ projects }: ProjectsProps) {
   const [position, setPosition] = useState<number>(0);
 
+  const latestProjects = projects.slice(0, 3).map(project => project);
+
   const handleNextPosition = () => {
-    setPosition(position === projects.length - 1 ? 0 : position + 1);
+    setPosition(position === latestProjects.length - 1 ? 0 : position + 1);
   };
 
   const handlePreviousPosition = () => {
-    setPosition(position === 0 ? projects.length - 1 : position - 1);
+    setPosition(position === 0 ? latestProjects.length - 1 : position - 1);
   };
 
   return (
@@ -34,9 +36,9 @@ function Projetos({ projects }: ProjectsProps) {
         <ProjectItem
           increment={() => handleNextPosition()}
           decrement={() => handlePreviousPosition()}
-          title={projects[position].title}
-          img={projects[position].thumb}
-          slug={projects[position].slug}
+          title={latestProjects[position].title}
+          img={latestProjects[position].thumb}
+          slug={latestProjects[position].slug}
         />
       </section>
       <button type="button">
