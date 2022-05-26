@@ -73,7 +73,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
     > div.text {
       position: absolute;
       top: 3rem;
-      right: -10rem;
+      right: -2rem;
       transition: 0.5s;
       width: fit-content;
     }
@@ -119,7 +119,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
   &:hover {
     > section {
       > div.text {
-        right: -15rem;
+        right: -10rem;
       }
     }
   }
