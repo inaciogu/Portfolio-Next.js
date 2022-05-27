@@ -57,6 +57,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
   width: 100%;
   display: flex;
   height: 25rem;
+  justify-content: center;
   align-items: center;
   position: relative;
 
@@ -64,7 +65,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40rem;
+    width: 100%;
     height: 100%;
     background: url(${props => props.imgSrc}) no-repeat center;
     background-size: cover;
@@ -73,7 +74,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
     > div.text {
       position: absolute;
       top: 3rem;
-      right: -10rem;
+      right: -2rem;
       transition: 0.5s;
       width: fit-content;
     }
@@ -100,7 +101,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
       a {
         color: ${({ theme }) => theme.colors.primary};
         font-size: 1.5rem;
-        font-weight: 300;
+        font-weight: 500;
         display: flex;
         align-items: center;
         gap: 0.8rem;
@@ -119,7 +120,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
   &:hover {
     > section {
       > div.text {
-        right: -15rem;
+        right: -10rem;
       }
     }
   }
