@@ -4,11 +4,15 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { BsGithub } from 'react-icons/bs';
 import { AiOutlineGlobal } from 'react-icons/ai';
+import { Box, Button, Link } from '@mui/material';
+import { useContext } from 'react';
+import { darken, lighten } from 'polished';
 import ProjectBanner from '../../components/ProjectBanner';
 import getPrismicClient from '../../services/prismic';
-import ProjectContainer, { ProjectButton } from '../../styles/ProjectStyle';
+import ProjectContainer from '../../styles/ProjectStyle';
 import Loading from '../../components/Loading';
 import Header from '../../components/Header';
+import { Context } from '../../context';
 
 interface IProject {
   slug: string;
@@ -26,6 +30,8 @@ interface ProjectProps {
 
 export default function Project({ project }: ProjectProps) {
   const router = useRouter();
+  const { theme } = useContext(Context);
+
   if (router.isFallback) {
     return <Loading />;
   }
@@ -49,16 +55,48 @@ export default function Project({ project }: ProjectProps) {
       />
       <main>
         <p>{project.description}</p>
-        <ProjectButton github={false} type="button">
-          <a target="_blank" href={project.link} rel="noreferrer">
-            <AiOutlineGlobal /> Projeto online
-          </a>
-        </ProjectButton>
-        <ProjectButton github type="button">
-          <a target="_blank" href={project.ghLink} rel="noreferrer">
-            <BsGithub /> Repositório do Projeto
-          </a>
-        </ProjectButton>
+        <Box
+          mt={3}
+          display="flex"
+          alignItems="center"
+          flexDirection={{ xs: 'column', md: 'row' }}
+        >
+          <Link
+            component={Button}
+            underline="none"
+            disabled={project.link.includes('null')}
+            target="_blank"
+            href={project.link}
+            startIcon={<AiOutlineGlobal />}
+            rel="noreferrer"
+            sx={{
+              background: theme.colors.primary,
+              color: '#fff',
+              mr: {
+                xs: 'inherit',
+                md: 2,
+                '&:hover': { background: darken(0.05, theme.colors.primary) }
+              }
+            }}
+          >
+            Projeto Online
+          </Link>
+          <Link
+            component={Button}
+            underline="none"
+            target="_blank"
+            href={project.ghLink}
+            startIcon={<BsGithub />}
+            rel="noreferrer"
+            sx={{
+              background: 'black',
+              color: '#fff',
+              '&:hover': { background: lighten(0.05, 'black') }
+            }}
+          >
+            Repositório do Projeto
+          </Link>
+        </Box>
       </main>
     </ProjectContainer>
   );
@@ -92,7 +130,7 @@ export const getStaticProps: GetStaticProps = async context => {
     title: response.data.title,
     type: response.data.type,
     description: response.data.description,
-    link: response.data.link.url,
+    link: response.data.link.url || '',
     thumb: response.data.thumb.url,
     ghLink: response.data.gh_link.url
   };
