@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   background: ${({ theme }) => theme.colors.gradient};
-  opacity: 0.3;
+  opacity: 0.5;
   transition: 0.5s;
   left: 0;
   bottom: 0;
