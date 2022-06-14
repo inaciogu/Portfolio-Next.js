@@ -5,6 +5,7 @@ const Container = styled.footer`
   display: flex;
   margin-top: 10rem;
   border-top: 1px solid ${({ theme }) => theme.colors.backgroundLight};
+  box-shadow: 0 0 4px ${({ theme }) => theme.colors.text};
   height: 5rem;
   align-items: center;
   justify-content: center;
@@ -22,6 +23,13 @@ const Container = styled.footer`
       font-weight: bold;
       font-size: 1.2rem;
     }
+
+    p {
+      font-weight: bold;
+      color: ${({ theme }) => theme.colors.text};
+      justify-content: space-evenly;
+    }
+
     > section {
       display: flex;
       align-items: center;
