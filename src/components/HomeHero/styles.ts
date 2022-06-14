@@ -9,16 +9,14 @@ export const Container = styled.section`
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.colors.text};
 
+  div {
+    flex: 1;
+  }
+
   div.animation {
     display: flex;
     width: 100%;
     align-items: center;
-  }
-
-  @media (max-width: 1450px) {
-    > div {
-      flex: 1;
-    }
   }
 
   @media (max-width: 700px) {
