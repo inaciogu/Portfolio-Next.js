@@ -33,7 +33,7 @@ function Welcome() {
             color="error"
             variant="contained"
             type="download"
-            href="gustavocv1.pdf"
+            href="gustavo_inacio_cv.pdf"
             startIcon={<AiOutlineFilePdf />}
             target="_blank"
           >
