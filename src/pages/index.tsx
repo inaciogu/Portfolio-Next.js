@@ -25,9 +25,12 @@ interface IProject {
 
 interface HomeProps {
   projects: IProject[];
+  aboutMe: {
+    text: string;
+  }[];
 }
 
-export default function Home({ projects }: HomeProps) {
+export default function Home({ projects, aboutMe }: HomeProps) {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
@@ -51,7 +54,7 @@ export default function Home({ projects }: HomeProps) {
       <Header />
       <main className="container">
         <Welcome />
-        <HomeHero />
+        <HomeHero section={aboutMe} />
         <Projects projects={projects} />
         <Certificates />
         <Knowledge />
@@ -64,10 +67,21 @@ export default function Home({ projects }: HomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
+  const aboutMe = [];
+
   const projectRes = await prismic.query(
     [Prismic.Predicates.at('document.type', 'project')],
     { orderings: '[document.first_publication_date desc]' }
   );
+  const aboutmeRes = await prismic.query(
+    [Prismic.Predicates.at('document.type', 'about')],
+    { orderings: '[document.first_publication_date desc]' }
+  );
+  if (aboutmeRes.results) {
+    aboutmeRes.results[0].data.section.map(item =>
+      aboutMe.push({ text: item.text })
+    );
+  }
 
   const projects = projectRes.results.map(project => ({
     slug: project.uid,
@@ -80,7 +94,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      projects
+      projects,
+      aboutMe
     },
     revalidate: 86400
   };
