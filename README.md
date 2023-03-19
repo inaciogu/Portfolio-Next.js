@@ -25,4 +25,4 @@ Os projetos contidos no portfólio são gerenciados por um CMS (content manageme
 - Rode o comando `yarn` para instalar as dependencias do projeto.
 - Inicialize a aplicação com o comando `yarn dev`.
 
-### Link do portfolio: <a href="https://portfolio-next-js-inaciogu.vercel.app/" target="blank">Portfolio</a>
+### Link do portfolio: <a href="https:/inaciogudev.com/" target="blank">Portfolio</a>
