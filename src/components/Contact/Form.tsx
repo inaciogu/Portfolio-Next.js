@@ -64,7 +64,7 @@ export default function Form({ open, onClose }: FormProps) {
     }
   };
   return (
-    <Dialog open={open} onClose={onClose}>
+    <Dialog open={open} onClose={onClose} PaperProps={{ sx: { width: 800 } }}>
       <Card sx={{ background: theme.colors.gradient }}>
         <Stack p={6} component="form" onSubmit={handleSubmit}>
           <Input

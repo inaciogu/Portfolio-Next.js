@@ -49,7 +49,7 @@ export const Input = styled.input`
   margin-bottom: 0.5rem;
   background: none;
   border: 1px solid ${({ theme }) => theme.colors.text};
-  color: ${({ theme }) => theme.colors.textHighlight};
+  color: ${({ theme }) => theme.colors.text};
   border-radius: 0.5rem;
   font-size: 1.2rem;
   outline: none;
