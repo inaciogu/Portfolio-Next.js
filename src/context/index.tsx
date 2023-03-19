@@ -15,12 +15,12 @@ export const ContextProvider: React.FC = ({ children }) => {
   const [theme, setTheme] = useState(DEFAULT_VALUE.theme);
   const toggleTheme = () => {
     if (theme.title === 'light') {
-      setCookie(null, 'theme', 'dark')
+      setCookie(null, 'theme', 'dark');
       setTheme(dark);
     }
 
     if (theme.title === 'dark') {
-      setCookie(null, 'theme', 'light')
+      setCookie(null, 'theme', 'light');
       setTheme(light);
     }
   };
@@ -28,7 +28,6 @@ export const ContextProvider: React.FC = ({ children }) => {
   useEffect(() => {
     const parsedCookies = parseCookies();
     if (parsedCookies) {
-      console.log(parsedCookies);
       setTheme(parsedCookies.theme === 'light' ? light : dark);
       return;
     }
