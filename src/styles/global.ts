@@ -16,6 +16,7 @@ export default createGlobalStyle`
     }
     ::-webkit-scrollbar-track{
       background: grey;
+      border-radius: 10px;
     }
   }
   body {
