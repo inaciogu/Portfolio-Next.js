@@ -30,7 +30,7 @@ function HomeHero({ section }: HomeHeroProps) {
       </div>
       <div>
         <TextContainer>
-          <h1>Quem sou?!</h1>
+          <h1>Sobre mim</h1>
           <InfosContainer>
             {section.map(item => (
               <InfoItem key={item.text} data-aos="zoom-in">
